@@ -1,1 +1,8 @@
 port: 7811
+host: localhost
+auth:
+  user: root
+  password: jcache
+
+
+

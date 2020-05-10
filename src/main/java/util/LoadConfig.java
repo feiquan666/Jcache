@@ -1,32 +1,22 @@
-package server;
+package util;
 
 import org.yaml.snakeyaml.Yaml;
+import server.ServerMain;
 
 import java.io.InputStream;
 import java.util.LinkedHashMap;
 
 /**
- * description: 服务端主方法
- * date: 2020-05-07 15:13:07
+ * description: 加载配置文件
+ * date: 获取指定属性
  * @author: 飞拳
  */
+public class LoadConfig {
 
-public class Main {
     public static LinkedHashMap<String, ?> I_CONFIG;
 
-    public static void main(String[] args) throws Exception {
-        loadConfig();
-        int port = 7811;
-        try {
-            port = Integer.parseInt(getConfig("port"));
-        }catch (Exception e){
-
-        }
-        new StartUp(port).run();
-    }
-
-    private static void loadConfig(){
-        InputStream reader = Main.class.getResourceAsStream("/jcache.yml");
+    public static void loadConfig(){
+        InputStream reader = ServerMain.class.getResourceAsStream("/jcache.yml");
         I_CONFIG = new Yaml().loadAs(reader, LinkedHashMap.class);
     }
 
