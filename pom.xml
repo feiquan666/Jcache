@@ -28,7 +28,7 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>3.11.0</version>
+            <version>3.16.1</version>
         </dependency>
         <!--        如果需要JsonFormat之类的功能-->
         <dependency>
